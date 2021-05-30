@@ -22,10 +22,8 @@ const Card = ({ data }) => {
           </div>
 
           <p class="card-text">
-            {data.participants !== ""
-              ? "Participants: " + data.participants
-              : null}
-            {data.prize !== "" ? "Prize: " + data.prize : null}
+            {data.participants !== "" ? data.participants : null}
+            {data.prize !== "" ? " Prize: " + data.prize : null}
           </p>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <a
