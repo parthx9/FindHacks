@@ -1,12 +1,12 @@
 import React from "react";
-import { mlh } from "../JSON/mlh";
+import { updatedJson } from "../JSON/data";
 import Card from "./Card";
 
 const CardsComponent = () => {
-  console.log(mlh);
+  console.log(updatedJson);
   return (
     <div className="grid-container">
-      {mlh.map((data) => (
+      {updatedJson.map((data) => (
         <div>
           <Card data={data} />
         </div>

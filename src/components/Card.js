@@ -5,25 +5,41 @@ import "../index.css";
 const Card = ({ data }) => {
   return (
     <div>
-      <div class="card" style={{ width: "80%", height: "80%" }}>
-        <img class="card-img-top" src={data.image} alt="mlh" />
+      <div class="card">
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <img
+            class="card-img-top"
+            src={data.image}
+            alt="mlh"
+            style={{ width: "30%", borderRadius: "20%", margin: "1rem 1rem" }}
+          />
+          <h5 style={{ margin: "1rem 1rem" }}>{data.date}</h5>
+        </div>
+
         <div class="card-body">
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <h4 class="card-title">{data.title}</h4>
-            <h5>{data.date}</h5>
           </div>
+
           <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            {data.participants !== ""
+              ? "Participants: " + data.participants
+              : null}
+            {data.prize !== "" ? "Prize: " + data.prize : null}
           </p>
-          <a
-            href={data.link}
-            target="_blank"
-            rel="noreferrer"
-            class="btn btn-primary"
-          >
-            Visit Website
-          </a>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <a
+              href={data.link}
+              target="_blank"
+              rel="noreferrer"
+              class="btn btn-primary"
+            >
+              Visit Website
+            </a>
+            <p style={{ position: "relative", top: "0.5rem" }}>
+              Powered By: {data.company}
+            </p>
+          </div>
         </div>
       </div>
     </div>
