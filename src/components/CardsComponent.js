@@ -1,14 +1,24 @@
-import React from "react";
-import { updatedJson } from "../JSON/data";
+import React, { useEffect, useState } from "react";
 import Card from "./Card";
+import axios from "axios";
 
 const CardsComponent = () => {
-  console.log(updatedJson);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await axios
+        .get("https://allhacks.herokuapp.com/hacks")
+        .then((res) => setData(res.data.hackathon));
+    };
+    fetchData();
+  }, []);
+  console.log(data);
   return (
     <div className="grid-container">
-      {updatedJson.map((data) => (
+      {data?.map((item) => (
         <div>
-          <Card data={data} />
+          <Card item={item} />
         </div>
       ))}
     </div>
