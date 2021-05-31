@@ -20,12 +20,13 @@ code {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 3rem;
+  grid-column-gap: 0rem;
   grid-row-gap: 3rem;
 }
 
 .styledCard {
-  -webkit-box-shadow: 0px 0px 131px -76px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 131px -76px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 131px -76px rgba(0, 0, 0, 0.75);
+  width: 400px;
+  height: 350px;
+  background: #303234;
+  border-radius: 30px;
 }
