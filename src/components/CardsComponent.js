@@ -30,30 +30,31 @@ const CardsComponent = () => {
 
   return (
     <>
-      <FormControl
-        className="test"
-        style={{ marginLeft: "45rem", width: "7rem", color: "white" }}
-      >
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={company}
-          onChange={handleChange}
+
+      <div className="container-fluid p-5">
+        <FormControl
+          className="test"
         >
-          <MenuItem value={"hacks"}>All</MenuItem>
-          <MenuItem value={"devfolio"}>Devfolio</MenuItem>
-          <MenuItem value={"mlh"}>MLH</MenuItem>
-          <MenuItem value={"devpost"}>Devpost</MenuItem>
-          <MenuItem value={"eventbrite"}>EventBrite</MenuItem>
-        </Select>
-      </FormControl>
-      <div className="grid-container">
-        {data?.map((item) => (
-          <div>
-            <Card item={item} />
-          </div>
-        ))}
+          <Select
+            labelId="demo-simple-select-label"
+            variant='outlined'
+            id="demo-simple-select"
+            value={company}
+            // variant='outline'
+            onChange={handleChange}
+          >
+            <MenuItem active value={"hacks"}>All</MenuItem>
+            <MenuItem value={"devfolio"}>Devfolio</MenuItem>
+            <MenuItem value={"mlh"}>MLH</MenuItem>
+            <MenuItem value={"devpost"}>Devpost</MenuItem>
+            <MenuItem value={"eventbrite"}>EventBrite</MenuItem>
+          </Select>
+        </FormControl>
+        <div className='row'>
+          {data?.map((item) => (
+              <Card item={item} />
+          ))}
+        </div>  
       </div>
     </>
   );

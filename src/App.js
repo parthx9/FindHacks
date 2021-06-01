@@ -1,9 +1,10 @@
 import CardsComponent from "./components/CardsComponent";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-      <h2 style={{ textAlign: "center" }}>Grabbr Hacks</h2>
+      <Header />
       <CardsComponent />
     </div>
   );

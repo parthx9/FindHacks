@@ -14,43 +14,93 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.header {
+  padding: 1rem 4rem;
+  border-bottom: #d0c8c8 2px inset;
+}
+.header .brand {
+  font-size: 2rem;
+  color: #d0c8c8;
+  font-weight: 700;
+}
+.card-body {
+  padding: 1rem 0rem 0rem 0rem !important;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.grid-container {
-  margin-top: 5rem;
-  margin-left: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0rem;
-  grid-row-gap: 3rem;
+.p-logo {
+  display: flex;
+  flex-direction: row;
+  background: #303234;
+  box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4),
+    -9px -9px 16px rgba(73, 73, 73, 0.6);
+  border-radius: 5px;
+  height: fit-content;
+  padding: 0.3rem 0.3rem;
 }
+.prize {
+  box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4),
+    -9px -9px 16px rgba(73, 73, 73, 0.6);
+  border-radius: 5px 5px 5px 20px;
 
+  position: absolute;
+  left: 0rem;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+
+  bottom: 0rem;
+  color: #303234;
+  transition: 0.2s;
+  background: #ffffff;
+}
+.prize:hover {
+  color: #ffffff;
+  transition: 0.2s;
+  background: #303234;
+}
+.p-logo img {
+  margin-right: 0.5rem;
+  padding: 0.2rem;
+}
+.p-logo p {
+  margin: 0%;
+  padding: 0%;
+  color: #ffffff;
+}
+.card-title a {
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.card-title a:hover {
+  text-decoration: none;
+  color: #d0c8c8 !important;
+}
 .styledCard {
-  width: 466px;
-  height: 530px;
+  padding: 1rem;
+  margin: 0.5rem;
+  height: 100%;
   background: #d0c8c8 !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px !important;
 }
 
 .imageIdentifier {
-  margin-top: 2rem;
-  width: 400px !important;
   height: 300px !important;
   border-radius: 20px !important;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .innerCard {
-  width: 400px;
-  height: 146px;
-
+  height: 100%;
+  padding: 1rem 1rem;
   background: #303234 !important;
   box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4),
     -9px -9px 16px rgba(73, 73, 73, 0.4);
@@ -60,20 +110,15 @@ code {
 }
 
 .specialButton {
-  width: 111px;
-  height: 33px;
-
   background: #454545 !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  font-size: 8px !important;
   line-height: 10px;
-  /* identical to box height */
-
+  display: block;
+  width: 100%;
   letter-spacing: 1px;
-
   color: #ffffff !important;
 }
