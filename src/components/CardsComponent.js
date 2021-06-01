@@ -5,10 +5,26 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+    backgroundColor: "#d0c8c8",
+    borderRadius: 14,
+    width: 200,
+    marginBottom: 40,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
 const CardsComponent = () => {
+  const classes = useStyles();
   const [data, setData] = useState([]);
-  const [company, setCompany] = useState("");
+  const [company, setCompany] = useState("All");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,6 +36,7 @@ const CardsComponent = () => {
   }, []);
 
   const handleChange = (e) => {
+    setCompany(e.target.value);
     const customData = async () => {
       await axios
         .get(`https://allhacks.herokuapp.com/${e.target.value}`)
@@ -30,31 +47,29 @@ const CardsComponent = () => {
 
   return (
     <>
-
       <div className="container-fluid p-5">
-        <FormControl
-          className="test"
-        >
+        <FormControl variant="outlined" className={classes.formControl}>
           <Select
             labelId="demo-simple-select-label"
-            variant='outlined'
+            variant="outlined"
             id="demo-simple-select"
             value={company}
-            // variant='outline'
             onChange={handleChange}
           >
-            <MenuItem active value={"hacks"}>All</MenuItem>
+            <MenuItem active value={"hacks"}>
+              All
+            </MenuItem>
             <MenuItem value={"devfolio"}>Devfolio</MenuItem>
             <MenuItem value={"mlh"}>MLH</MenuItem>
             <MenuItem value={"devpost"}>Devpost</MenuItem>
             <MenuItem value={"eventbrite"}>EventBrite</MenuItem>
           </Select>
         </FormControl>
-        <div className='row'>
+        <div className="row">
           {data?.map((item) => (
-              <Card item={item} />
+            <Card item={item} />
           ))}
-        </div>  
+        </div>
       </div>
     </>
   );

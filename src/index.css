@@ -42,8 +42,8 @@ code {
   padding: 0.3rem 0.3rem;
 }
 .prize {
-  box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4),
-    -9px -9px 16px rgba(73, 73, 73, 0.6);
+  /* box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4),
+    -9px -9px 16px rgba(73, 73, 73, 0.6); */
   border-radius: 5px 5px 5px 20px;
 
   position: absolute;
@@ -56,11 +56,7 @@ code {
   transition: 0.2s;
   background: #ffffff;
 }
-.prize:hover {
-  color: #ffffff;
-  transition: 0.2s;
-  background: #303234;
-}
+
 .p-logo img {
   margin-right: 0.5rem;
   padding: 0.2rem;
