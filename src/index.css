@@ -1,5 +1,9 @@
 html body {
-  background-color: #242b2e;
+  background: linear-gradient(
+    120.87deg,
+    #3b3d3f 33.47%,
+    rgba(16, 23, 45, 0.7) 100%
+  );
 }
 
 body {
@@ -17,6 +21,8 @@ code {
 }
 
 .grid-container {
+  margin-top: 5rem;
+  margin-left: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -25,8 +31,49 @@ code {
 }
 
 .styledCard {
+  width: 466px;
+  height: 530px;
+  background: #d0c8c8 !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px !important;
+}
+
+.imageIdentifier {
+  margin-top: 2rem;
+  width: 400px !important;
+  height: 300px !important;
+  border-radius: 20px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.innerCard {
   width: 400px;
-  height: 350px;
-  background: #303234;
-  border-radius: 30px;
+  height: 146px;
+
+  background: #303234 !important;
+  box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4),
+    -9px -9px 16px rgba(73, 73, 73, 0.4);
+  border-radius: 20px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.specialButton {
+  width: 111px;
+  height: 33px;
+
+  background: #454545 !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8px !important;
+  line-height: 10px;
+  /* identical to box height */
+
+  letter-spacing: 1px;
+
+  color: #ffffff !important;
 }
