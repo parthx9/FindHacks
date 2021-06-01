@@ -41,10 +41,11 @@ const CardsComponent = () => {
           value={company}
           onChange={handleChange}
         >
+          <MenuItem value={"hacks"}>All</MenuItem>
           <MenuItem value={"devfolio"}>Devfolio</MenuItem>
           <MenuItem value={"mlh"}>MLH</MenuItem>
           <MenuItem value={"devpost"}>Devpost</MenuItem>
-          <MenuItem value={"eventbrite"}>Event Brite</MenuItem>
+          <MenuItem value={"eventbrite"}>EventBrite</MenuItem>
         </Select>
       </FormControl>
       <div className="grid-container">
