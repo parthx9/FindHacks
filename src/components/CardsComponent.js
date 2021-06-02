@@ -12,9 +12,9 @@ const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
     minWidth: 120,
-    backgroundColor: "#d0c8c8",
+    backgroundColor: "#33353d",
     borderRadius: 14,
-    width: 200,
+    width: 240,
     marginBottom: 40,
   },
   selectEmpty: {
@@ -52,12 +52,15 @@ const CardsComponent = () => {
     <>
       <div className="container-fluid p-5">
         <FormControl variant="outlined" className={classes.formControl}>
+          <InputLabel className="dropdown-title">Filter Hackathons</InputLabel>
+
           <Select
             labelId="demo-simple-select-label"
             variant="outlined"
             id="demo-simple-select"
             value={company}
             onChange={handleChange}
+            className="menu-item"
           >
             <MenuItem active value={"hacks"}>
               All
