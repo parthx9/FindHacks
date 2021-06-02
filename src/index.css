@@ -2,11 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 
 html body {
-  background: linear-gradient(
+  /* background: linear-gradient(
     120.87deg,
     #3b3d3f 33.47%,
     rgba(16, 23, 45, 0.7) 100%
-  );
+  ); */
+  background-color: #1c1d21;
 }
 
 body {
@@ -20,11 +21,11 @@ body {
 }
 .header {
   padding: 1rem 4rem;
-  border-bottom: #d0c8c8 2px inset;
+  border-bottom: #26a17a 2px inset;
 }
 .header .brand {
   font-size: 2rem;
-  color: #d0c8c8;
+  color: #26a17a;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   font-weight: 1200;
@@ -142,4 +143,9 @@ code {
   width: 100%;
   letter-spacing: 1px;
   color: #ffffff !important;
+}
+
+.skeleton {
+  margin-right: 140px;
+  margin-bottom: 50px;
 }

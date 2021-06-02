@@ -6,6 +6,8 @@ import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import { makeStyles } from "@material-ui/core";
+import Loader from "./Loader";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -25,12 +27,14 @@ const CardsComponent = () => {
   const classes = useStyles();
   const [data, setData] = useState([]);
   const [company, setCompany] = useState("All");
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       await axios
         .get("https://allhacks.herokuapp.com/hacks")
         .then((res) => setData(res.data.hackathon));
+      setLoader(false);
     };
     fetchData();
   }, []);
@@ -59,17 +63,41 @@ const CardsComponent = () => {
             <MenuItem active value={"hacks"}>
               All
             </MenuItem>
-            <MenuItem value={"devfolio"}>Devfolio</MenuItem>
-            <MenuItem value={"mlh"}>MLH</MenuItem>
-            <MenuItem value={"devpost"}>Devpost</MenuItem>
-            <MenuItem value={"eventbrite"}>EventBrite</MenuItem>
+            <MenuItem className="menu-item" value={"devfolio"}>
+              Devfolio
+            </MenuItem>
+            <MenuItem className="menu-item" value={"mlh"}>
+              MLH
+            </MenuItem>
+            <MenuItem className="menu-item" value={"devpost"}>
+              Devpost
+            </MenuItem>
+            <MenuItem className="menu-item" value={"eventbrite"}>
+              EventBrite
+            </MenuItem>
+            <MenuItem className="menu-item" value={"hackerearth"}>
+              HackerEarth
+            </MenuItem>
           </Select>
         </FormControl>
+        {/* {loader ? (
+          <>
+            <SkeletonTheme color="#d0c8c8" highlightColor="#e9e9e9">
+              <Skeleton
+                height={420}
+                width={320}
+                count={3}
+                className="skeleton"
+              />
+            </SkeletonTheme>
+          </>
+        ) : ( */}
         <div className="row">
           {data?.map((item) => (
             <Card item={item} />
           ))}
         </div>
+        {/* )} */}
       </div>
     </>
   );
