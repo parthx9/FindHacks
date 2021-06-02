@@ -6,8 +6,7 @@ import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import { makeStyles } from "@material-ui/core";
-import Loader from "./Loader";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import HashLoader from "react-spinners/HashLoader";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -80,24 +79,21 @@ const CardsComponent = () => {
             </MenuItem>
           </Select>
         </FormControl>
-        {/* {loader ? (
-          <>
-            <SkeletonTheme color="#d0c8c8" highlightColor="#e9e9e9">
-              <Skeleton
-                height={420}
-                width={320}
-                count={3}
-                className="skeleton"
-              />
-            </SkeletonTheme>
-          </>
-        ) : ( */}
-        <div className="row">
-          {data?.map((item) => (
-            <Card item={item} />
-          ))}
-        </div>
-        {/* )} */}
+        {loader ? (
+          <div className="loader">
+            <HashLoader
+              size={170}
+              color={"#26a17a"}
+              loading={loader}
+            ></HashLoader>
+          </div>
+        ) : (
+          <div className="row">
+            {data?.map((item) => (
+              <Card item={item} />
+            ))}
+          </div>
+        )}
       </div>
     </>
   );
