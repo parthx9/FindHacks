@@ -50,7 +50,7 @@ const CardsComponent = () => {
 
   return (
     <>
-      <div className="container-fluid p-5">
+      <div className="container-fluid p-md-5 p-3">
         <FormControl variant="outlined" className={classes.formControl}>
           <InputLabel className="dropdown-title">Filter Hackathons</InputLabel>
 

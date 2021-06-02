@@ -21,6 +21,7 @@ body {
 }
 .header {
   padding: 1rem 4rem;
+  display: flex;
   border-bottom: #26a17a 2px inset;
 }
 .header .brand {
@@ -171,7 +172,25 @@ code {
   font-weight: 700 !important;
 }
 
-@media only screen and (max-width: 600px) {
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+
+.github {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.github a {
+  color: #ffffff;
+}
+.github a:hover {
+  color: #26a17a;
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
   .loader {
     position: absolute;
     left: 180px !important;
