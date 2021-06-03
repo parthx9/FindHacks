@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
-import axios from "axios";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import { makeStyles } from "@material-ui/core";
 import HashLoader from "react-spinners/HashLoader";
+import { api } from "../services/api";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -28,11 +28,9 @@ const CardsComponent = () => {
   const [company, setCompany] = useState("All");
   const [loader, setLoader] = useState(true);
 
-  const apiURL = "https://allhacks.herokuapp.com";
-
   useEffect(() => {
     const fetchData = async () => {
-      const results = await axios.get(`${apiURL}/hacks`);
+      const results = await api.get("/hacks");
       setData(results.data.hackathon);
       setLoader(false);
     };
@@ -42,7 +40,7 @@ const CardsComponent = () => {
   const handleChange = (e) => {
     setCompany(e.target.value);
     const customData = async () => {
-      const results = await axios.get(`${apiURL}/${e.target.value}`);
+      const results = await api.get(`/${e.target.value}`);
       setData(results.data.hackathon);
     };
     customData();
