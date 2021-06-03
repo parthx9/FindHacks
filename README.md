@@ -1,4 +1,21 @@
-# Getting Started with Create React App
+# Find Hacks
+
+An easy way to find hackathons
+
+<img src='_shared/findhacks.png'>
+
+## Technologies Used
+
+- React.js
+- Flask
+- Heroku
+- Firebase
+
+This is an open source project, feel free to contribute. For any backend related questions reach out to me on https://github.com/zinader
+
+# Deployment
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
