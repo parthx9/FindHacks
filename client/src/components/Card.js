@@ -34,10 +34,10 @@ const Card = ({ item }) => {
           />
         </div>
 
-        <div class="card-body">
+        <div className="card-body">
           <div className="innerCard">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <h4 class="card-title">
+              <h4 className="card-title">
                 <a target="_blank" href={item.link}>
                   {item.title}
                 </a>
