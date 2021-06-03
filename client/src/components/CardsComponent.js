@@ -34,7 +34,6 @@ const CardsComponent = () => {
     const fetchData = async () => {
       const results = await axios.get(`${apiURL}/hacks`);
       setData(results.data.hackathon);
-      console.log(results.data.hackathon);
       setLoader(false);
     };
     fetchData();

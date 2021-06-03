@@ -38,7 +38,7 @@ const Card = ({ item }) => {
           <div className="innerCard">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h4 className="card-title">
-                <a target="_blank" href={item.link}>
+                <a target="_blank" rel="noreferrer" href={item.link}>
                   {item.title}
                 </a>
               </h4>
