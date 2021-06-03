@@ -28,11 +28,13 @@ const CardsComponent = () => {
   const [company, setCompany] = useState("All");
   const [loader, setLoader] = useState(true);
 
+  const apiURL = "https://allhacks.herokuapp.com";
+
   useEffect(() => {
     const fetchData = async () => {
-      await axios
-        .get("https://allhacks.herokuapp.com/hacks")
-        .then((res) => setData(res.data.hackathon));
+      const results = await axios.get(`${apiURL}/hacks`);
+      setData(results.data.hackathon);
+      console.log(results.data.hackathon);
       setLoader(false);
     };
     fetchData();
@@ -41,15 +43,14 @@ const CardsComponent = () => {
   const handleChange = (e) => {
     setCompany(e.target.value);
     const customData = async () => {
-      await axios
-        .get(`https://allhacks.herokuapp.com/${e.target.value}`)
-        .then((res) => setData(res.data.hackathon));
+      const results = await axios.get(`${apiURL}/${e.target.value}`);
+      setData(results.data.hackathon);
     };
     customData();
   };
 
   return (
-    <>
+    <React.Fragment>
       <div className="container-fluid p-md-5 p-3">
         <FormControl variant="outlined" className={classes.formControl}>
           <InputLabel className="dropdown-title">Filter Hackathons</InputLabel>
@@ -92,13 +93,13 @@ const CardsComponent = () => {
           </div>
         ) : (
           <div className="row">
-            {data?.map((item) => (
-              <Card item={item} />
+            {data?.map((item, idx) => (
+              <Card item={item} key={idx} />
             ))}
           </div>
         )}
       </div>
-    </>
+    </React.Fragment>
   );
 };
 
