@@ -25,31 +25,20 @@ This is an open source project, feel free to contribute. For any backend related
 
 ### Make sure you have `venv` and `pip` downloaded
 
-```
-cd api
-```
+### `cd api`
 
-```
-python3 -m venv flask
-```
+### `python3 -m venv flask`
 
-```
-source flask/bin/activate
-```
+### `source flask/bin/activate`
 
-```
-pip3 install -r requirements.txt
-```
+### `pip3 install -r requirements.txt`
 
-```
-uvicorn main:app --reload
-```
+### `python3 app.py`
 
-## Creators -  
+## Creators -
 
-- Pulkit Aggarwal
-- Aditya Saxena
-- Parth Arora
-
+- [Pulkit Aggarwal](https://github.com/zinader)
+- [Aditya Saxena](https://github.com/aditya2305)
+- [Parth Arora](https://github.com/parthx9)
 
 `Please help us optimise this :)`
