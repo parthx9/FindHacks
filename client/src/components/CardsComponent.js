@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 const CardsComponent = () => {
   const classes = useStyles();
   const [data, setData] = useState([]);
-  const [company, setCompany] = useState("All");
+  const [company, setCompany] = useState("hacks");
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
