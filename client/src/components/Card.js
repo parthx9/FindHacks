@@ -19,7 +19,11 @@ const Card = ({ item }) => {
             src={item.image}
             alt="mlh"
           />
-          {item.prize !== "" ? <div className="prize">{item.prize}</div> : null}
+          {item.prize !== "" ? (
+            <div className="prize" data-testid="card-prize">
+              {item.prize}
+            </div>
+          ) : null}
           <img
             src={item.companyLogo}
             alt="logo"
@@ -43,7 +47,7 @@ const Card = ({ item }) => {
                 </a>
               </h4>
               {item.participants !== "" ? (
-                <div className="p-logo">
+                <div className="p-logo" data-testid="card-participants">
                   <img src={logo} alt="people" />
                   <p>{item.participants}</p>
                 </div>
