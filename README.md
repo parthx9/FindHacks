@@ -45,4 +45,11 @@ pip3 install -r requirements.txt
 uvicorn main:app --reload
 ```
 
+## Creators -  
+
+- Pulkit Aggarwal
+- Aditya Saxena
+- Parth Arora
+
+
 `Please help us optimise this :)`
