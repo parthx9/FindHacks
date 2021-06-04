@@ -1,5 +1,5 @@
 import axios from "axios";
 
-const apiURL = "https://allhacks.herokuapp.com";
+const apiURL = "https://findhacks.herokuapp.com/";
 
-export const api = axios.create({baseURL: apiURL});
+export const api = axios.create({ baseURL: apiURL });
