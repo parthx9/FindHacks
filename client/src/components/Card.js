@@ -5,7 +5,7 @@ import logo from "../assets/participant.png";
 
 const Card = ({ item }) => {
   return (
-    <div className="col-md-4 mb-4">
+    <div className="col-md-4 mb-4" data-testid="card">
       <div className="card styledCard">
         <div
           style={{
