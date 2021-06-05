@@ -5,6 +5,7 @@ from scrapers.devpost import devpost
 from scrapers.devfolio import devfolio
 from scrapers.eventbrite import eventbrite
 from scrapers.hackerearth import hackerearth
+from scrapers.hackclub import hackclub
 
 
 def get_hackatons():
@@ -14,6 +15,7 @@ def get_hackatons():
     hackathons = devfolio(hackathons)
     hackathons = eventbrite(hackathons)
     hackathons = hackerearth(hackathons)
+    hackathons = hackclub(hackathons)
 
     return hackathons
 

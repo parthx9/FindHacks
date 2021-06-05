@@ -78,6 +78,9 @@ const CardsComponent = () => {
             <MenuItem className="menu-item" value={"hackerearth"}>
               HackerEarth
             </MenuItem>
+            <MenuItem className="menu-item" value={"hackclub"}>
+              HighSchool
+            </MenuItem>
           </Select>
         </FormControl>
         {loader ? (
