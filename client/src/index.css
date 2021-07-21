@@ -151,11 +151,11 @@ code {
   margin-bottom: 50px;
 }
 
-.loader {
+/* .loader {
   position: absolute;
   left: 690px !important;
   top: 400px;
-}
+} */
 
 .menu-item {
   font-family: "Montserrat", sans-serif !important;

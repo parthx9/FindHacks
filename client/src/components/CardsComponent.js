@@ -84,7 +84,7 @@ const CardsComponent = () => {
           </Select>
         </FormControl>
         {loader ? (
-          <div className="loader">
+          <div className="d-flex justify-content-center">
             <HashLoader
               size={170}
               color={"#26a17a"}
